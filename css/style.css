@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "Monument Extended";
+    src: url("../assets/font/MonumentExtended-Black.woff") format("woff");
+}
+
 :root{
     --primary_font: 'Monument Extended', sans-serif;
     --secondary_font: 'Montserrat', sans-serif;
