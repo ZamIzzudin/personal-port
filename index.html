@@ -5,28 +5,167 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Personal Portfolio</title>
-    <link rel="stylesheet" href="./css/style-dekstop.css">
-    <link rel="stylesheet" href="./css/style-mobile.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="./css/style.css">
+    <!-- FONT -->
     <link href="http://fonts.cdnfonts.com/css/monument-extended" rel="stylesheet">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap"
         rel="stylesheet">
 </head>
 <body>
-    <nav></nav>
-    <div class="socmed-link"></div>
-    <section>
-        <h1>I'm Azzam,</h1>
-        <h1>web developer</h1>
-        <h2>Front End Developer</h2>
-        <button>contact me</button>
-        <p><a href="">see my work</a> or <a href="">read about me</a></p>
-    </section>
-    <section></section>
-    <section></section>
-    <section></section>
+    <!-- Navbar -->
+    <nav>
+        <div class="navbar">
+            <a class="about-btn" href="">About Me <i class="fas fa-long-arrow-alt-right arrow"></i></a>
+            <input type="checkbox" class="checkbox">
+            <div class="nav-burger-menu">
+                <span class="span-menu">MENU</span>
+                <div class="btn-burger">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                </div>
+            </div>
+            <div class="nav-burger-items">
+                <ul>
+                    <li class="nav-burger-title">MENU</li>
+                    <li class="nav-burger-item"><a href="">Home</a></li>
+                    <li class="nav-burger-item"><a href="">Project</a></li>
+                    <li class="nav-burger-item"><a href="">Contact</a></li>
+                    <div class="nav-burger-socmed">
+                        <li class="socmed-link">
+                            <a href="mailto:azzamizzudinhasan@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        </li>
+                        <li class="socmed-link">
+                            <a href="https://discordapp.com/users/533661901977026580" target="_blank"><i class="fab fa-discord"></i></a>
+                        </li>
+                        <li class="socmed-link">
+                            <a href="https://www.linkedin.com/in/azzam-izzudin-084294219/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        </li>
+                        <li class="socmed-link">
+                            <a href="https://github.com/ZamIzzudin" target="_blank"><i class="fab fa-github"></i></a>
+                        </li>
+                    </div>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <main id="luxy">
+    <!-- Front Page -->
+        <section class="front-page">
+            <div class="title-viewport">
+                <div class="title-container" >
+                    <span>AZZAM</span>
+                    <span>IZZUDIN</span>
+                    <span>AZZAM</span>
+                    <span>IZZUDIN</span>
+                    <span>AZZAM</span>
+                </div>
+                <div class="title-container">
+                    <span>WEB</span>
+                    <span>DEVELOPER</span>
+                    <span>WEB</span>
+                    <span>DEVELOPER</span>
+                </div>
+            </div>
+            <div class="title-out-viewport">
+                <div class="title-out-container">
+                    <span>AZZAM</span>
+                    <span>IZZUDIN</span>
+                    <span>AZZAM</span>
+                    <span>IZZUDIN</span>
+                    <span>AZZAM</span>
+                </div>
+                <div class="title-out-container">
+                    <span>WEB</span>
+                    <span>DEVELOPER</span>
+                    <span>WEB</span>
+                    <span>DEVELOPER</span>
+                </div>
+            </div>
+            <img class="rotate-hello" src="./assets/rotate-hello.png" alt="" width="200">
+        </section>
 
+        <!-- Work -->   
+        <section class="project">
+            <span>PROUDLY PRESENT</span>
+            <div class="project-title">
+                <h3 class="section-title">PROJECT</h3>
+                <h3 class="section-title">PROJECT</h3>
+                <h3 class="section-title">PROJECT</h3>
+            </div>
+            <div class="project-card">
+                <div class="project-viewport">
+                    <img src="./assets/liberty.jpg" alt="" height="400">
+                    <div class="project-info">
+                        <span class="project-num">01.</span>
+                        <h1 class="project-name">Company Profile</h1>
+                        <h2 class="project-tool">Wordpress</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card right">
+                <div class="project-viewport">
+                    <img src="./assets/lisa.jpg" alt="" height="450">
+                    <div class="project-info">
+                        <span class="project-num">02.</span>
+                        <h1 class="project-name">Company Profile</h1>
+                        <h2 class="project-tool">Wordpress</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card">
+                <div class="project-viewport">
+                    <img src="./assets/kimono.jpg" alt="" height="350">
+                    <div class="project-info">
+                        <span class="project-num">03.</span>
+                        <h1 class="project-name">Company Profile</h1>
+                        <h2 class="project-tool">Wordpress</h2>
+                    </div>
+                </div>
+            </div>
+            <div class="project-card right">
+                <div class="project-viewport">
+                    <img src="./assets/wave.png" alt="" height="400">
+                    <div class="project-info">
+                        <span class="project-num">04.</span>
+                        <h1 class="project-name">Company Profile</h1>
+                        <h2 class="project-tool">Wordpress</h2>
+                    </div>
+                </div>
+            </div>
+            <a class="project-btn" href="">See My Other Project <i class="fas fa-long-arrow-alt-right arrow"></i></a>
+        </section>
+
+        <!-- Contact -->
+        <section class="contact">
+            <div class="contact-title">
+                <h3 class="section-title">CONTACT</h3>
+                <div class="contact-img-title">
+                    <img src="./assets/3.jpg" alt="">
+                </div>
+                <h3 class="section-title">CONTACT</h3>
+                <h3 class="section-title">CONTACT</h3>
+            </div>
+            <div class="contact-text">
+                <p>Have a project in mind? Would you like to share it? Feel free to reach out by writing email.</p>
+                <a class="contact-btn" href="">Get In Touch <i class="fas fa-long-arrow-alt-right arrow"></i></a>
+            </div>
+        </section>
+        <footer>
+            <span>by insecure man</span>
+        </footer>
+    </main>
+
+    <script src="https://kit.fontawesome.com/df0133b48d.js" crossorigin="anonymous"></script>
+    <script src="./js/luxy.js" charset="utf-8"></script>
+    <script charset="utf-8">
+        luxy.init();
+    </script>
     <script src="./js/script.js"></script>
 </body>
 </html>
