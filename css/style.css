@@ -64,19 +64,56 @@ section .section-title:nth-child(1){
 }
 
 /* Animation */
-@keyframes title{  /* deleted soon */
-    from{transform:translateX(-80%)}
-    to{transform:translateX(-130%)}
-}
-
 @keyframes rotate{
     from{transform:rotate(0)}
     to{transform:rotate(360deg)}
 }
 
-@keyframes greet{
-    from{transform:translateX(0)}
-    to{transform:translateX(-30%)}
+@keyframes loading{
+    0%{width:0}
+    100%{width:100%}
+}
+
+
+/* Preloader */
+#preloader{
+    background-color: var(--primary_color);
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    transition: .7s;
+}
+
+#preloader img{
+    max-width: 15%;
+    max-height: auto;
+}
+
+#preloader span{
+    font-family: var(--primary_font);
+    font-size: 2.5em;
+    margin-top: 15px;
+    position: relative;
+    color : transparent;
+    -webkit-text-stroke: 1px rgba(255, 255, 255, .3);
+}
+
+#preloader span::before{
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 80%;
+    height: 100%;
+    color: var(--secondary_color);
+    -webkit-text-stroke: 0;
+    overflow: hidden;
+    animation: loading 2s infinite alternate;
 }
 
 /* Navbar */
@@ -359,8 +396,9 @@ nav{
 }
 
 .project-viewport img{
-    width: 30vw;
-    max-width: 35vw;
+    width: 28vw;
+    max-width: 28vw;
+    
 }
 
 .project-info{
@@ -423,10 +461,11 @@ nav{
 }
 
 .project-desc{
+    background-color: rgba(0, 0, 0, 0.7);
     width: 100%;
-    height: 85%;
+    height: 28vw;
+    max-height: 28vw;
     position: absolute;
-    background-color: rgba(0,0,0,.7);
     opacity: 0;
     transition: .5s;
 }
@@ -466,6 +505,7 @@ nav{
     opacity: 1;
 }
 
+
 /* Contact */
 .contact{
     min-height: 80vh !important;
@@ -486,10 +526,11 @@ nav{
 .contact-img-title{
     position: absolute;
     width: 35vw;
+    max-width: 600px;
     height: auto;
     background-color: var(--primary_color);
     top: 0;
-    left: 5%;
+    left: 5.5%;
     z-index: -1;
     overflow: hidden;
 }

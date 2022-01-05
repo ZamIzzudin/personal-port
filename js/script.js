@@ -125,6 +125,8 @@ const aboutBtn = getHTML('.about-btn');
 
 const projectContainer = getHTML('.project');
 
+const preloader = getHTML('#preloader');    
+
 getDataProject('./data.json', success); 
 
 // EVENT LISTENER
@@ -155,7 +157,7 @@ document.addEventListener("scroll",()=>{
             renderY(projectCard[1],1);
             if(scrollY > 1800){
                 renderY(projectCard[2],1);
-                if(scrollY > 2200){
+                if(scrollY > 2300){
                     renderY(projectCard[3],1);
                 }else{
                     fadeY(projectCard[3]);
@@ -170,7 +172,7 @@ document.addEventListener("scroll",()=>{
         fadeY(projectCard[0]);
     }
 
-    if (scrollY > 2700) {
+    if (scrollY > 2900) {
         rendersY(contactTitle);
         setTimeout(() => {
             renderY(contactImg,.7);    
@@ -180,4 +182,13 @@ document.addEventListener("scroll",()=>{
         fadeY(contactImg);
     }
 
+})
+
+window.addEventListener("load", ()=>{
+    setTimeout(() => {
+        preloader.style.opacity = 0;
+        setTimeout(() => {
+            preloader.style.display = "none";        
+        }, 700);  
+    }, 2000);
 })
