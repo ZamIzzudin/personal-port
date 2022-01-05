@@ -90,7 +90,7 @@ section .section-title:nth-child(1){
 }
 
 #preloader img{
-    max-width: 15%;
+    max-width: 10%;
     max-height: auto;
 }
 
