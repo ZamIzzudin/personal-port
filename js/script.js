@@ -24,6 +24,7 @@ function rendersY(e) {
             el.style.opacity = 1;
         }, 300 * index);
     })
+    console.log("nyala")
 }
 
 function fadesX(e){
@@ -53,24 +54,85 @@ function fadeY(e){
     e.style.transform = `translateY(100%)`;
 }
 
-// HTML ELEMENT
+function getDataProject(url,success){
+    let dataProject = new XMLHttpRequest();
 
+    dataProject.onreadystatechange = () => {
+        if(dataProject.readyState === 4){
+            if(dataProject.status === 200){
+                success(dataProject.response);
+            }else if(dataProject.status === 404){
+                alert('data not found');
+            }
+        }
+    }
+
+    dataProject.open('get', url);
+    dataProject.send();
+}
+
+function success(result){
+    let data = JSON.parse(result);
+
+    renderData = data.slice(0, 4);
+    linkData = data[4];
+    
+    renderData.forEach((e,i)=>{
+        if(i % 2 === 0){
+            render = renderCard(e, i);
+            projectContainer.innerHTML += render;
+        }else{
+            render = renderCard(e, i, "right");  
+            projectContainer.innerHTML += render;
+        }
+    })
+
+    projectContainer.innerHTML += renderLink(linkData);
+
+}
+
+function renderCard(data,index,right){
+    return `<div class="project-card ${right}">
+                <div class="project-viewport">
+                    <div class="project-desc">
+                        <span class="project-desc-year">${data.year}</span>
+                        <a href="${data.link}" class="project-desc-link" >See Details <i class="fas fa-long-arrow-alt-right arrow"></i></a>
+                    </div>
+                    <img src="${data.thumbnail}" alt="Thumbnail picture of ${data.name}" >
+                    <div class="project-info">
+                        <span class="project-num">0${index +1}.</span>
+                        <h1 class="project-name">${data.name}</h1>
+                        <h2 class="project-tool">${data.tool}</h2>
+                    </div>
+                </div>
+            </div>`
+}
+
+function renderLink(data){
+    return `<a class="project-btn" href="${data.link}">See My ${data.name} <i class="fas fa-long-arrow-alt-right arrow"></i></a>`
+}
+
+// HTML ELEMENT
 const titleFP = getHTMLs('.title-container');
 
 const titleOutFP = getHTMLs('.title-out-container');
 
-const projectTitle = getHTMLs('.project-title .section-title');
-
-const projectCard = getHTMLs('.project-viewport');
-
 const contactTitle = getHTMLs('.contact-title .section-title');
 
-const contactImg = getHTML('.contact-img-title img')
-// EVENT LISTENER
+const contactImg = getHTML('.contact-img-title img');
 
-document.addEventListener("scroll", ()=>{
+const aboutBtn = getHTML('.about-btn');
+
+const projectContainer = getHTML('.project');
+
+getDataProject('./data.json', success); 
+
+// EVENT LISTENER
+document.addEventListener("scroll",()=>{
     let scrollY = window.pageYOffset;
-    console.log(scrollY);
+
+    const projectTitle = getHTMLs('.project-title .section-title');
+    const projectCard = getHTMLs('.project-viewport');
 
     if(scrollY < 500){
         titleFP[0].style.transform = `translateX(${-80 - (scrollY/10)}%)`;
@@ -81,8 +143,10 @@ document.addEventListener("scroll", ()=>{
 
     if(scrollY > 500){
         rendersX(projectTitle);
+        aboutBtn.style.opacity = 0;
     }else{
         fadesX(projectTitle);
+        aboutBtn.style.opacity = 1;
     }
 
     if(scrollY > 900){

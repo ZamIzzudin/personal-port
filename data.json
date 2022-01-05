@@ -1,0 +1,34 @@
+[
+    {
+        "name" : "Slicing",
+        "year" : "2021",
+        "thumbnail" : "./assets/liberty.jpg",
+        "tool" : "HTML, CSS, JS",
+        "link" : ""
+    },
+    {
+        "name": "Online Shop",
+        "year": "2022",
+        "thumbnail": "./assets/lisa.jpg",
+        "tool": "REACT, EXPRESS, NODE, MYSQL",
+        "link": ""
+    },
+    {
+        "name": "Marketplace",
+        "year": "2022",
+        "thumbnail": "./assets/kimono.jpg",
+        "tool": "REACT, EXPRESS, NODE, MONGODB",
+        "link": ""
+    },
+    {
+        "name": "Office System",
+        "year": "2022",
+        "thumbnail": "./assets/wave.png",
+        "tool": "EXPRESS, NODE, MYSQL, REACT NATIVE",
+        "link": ""
+    },
+    {
+        "name" : "Other Project",
+        "link" : ""
+    }
+]
