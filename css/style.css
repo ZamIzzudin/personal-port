@@ -54,6 +54,10 @@ section .section-title:nth-child(1){
     -webkit-text-fill-color: var(--secondary_color);
 }
 
+.mobile{
+    display: none;
+}
+
 /* Scroll Bar */
 ::-webkit-scrollbar{
     width: 5px;
@@ -178,7 +182,6 @@ nav{
     background-color: var(--secondary_color);
     height: 4px;
     width: 100%;
-    border-radius: 30px;
 }
 
 .line1{
@@ -339,7 +342,7 @@ nav{
 }
 
 .title-viewport span{
-    -webkit-text-stroke: 1px transparent;
+    -webkit-text-stroke: 1px --secondary_color;
     -webkit-text-fill-color: var(--secondary_color);
 }
 
@@ -364,7 +367,6 @@ nav{
 }
 
 .project-title{
-    grid-area: bagian2;
     position: relative;
     padding-top: 4%;
 }
@@ -397,8 +399,7 @@ nav{
 
 .project-viewport img{
     width: 28vw;
-    max-width: 28vw;
-    
+    max-width: 28vw;  
 }
 
 .project-info{
@@ -450,7 +451,7 @@ nav{
 }
 
 .project-btn i {
-    margin: 0 10px;
+    margin: 0 0 0 10px;
 }
 
 .project-btn:hover{
@@ -519,7 +520,7 @@ nav{
 .contact-title .section-title{
     display: block;
     transform: translateY(30vh);
-    opacity: 0;
+    opacity: 1;
     transition: .7s;
 }
 
@@ -613,4 +614,158 @@ footer span{
     font-size: .8em;
     letter-spacing: 1px;
     padding: 10px 10px;
+}
+
+@media screen and (max-width: 1023px) {
+
+    .dekstop{
+        display: none !important;
+    }
+    
+    .mobile{
+        display: block;
+    }
+
+    #preloader img{
+    max-width: 20vh;
+    max-height: auto;
+    }
+    
+    nav{
+        margin: 5% 0;
+    }
+
+    .title-container, .title-out-container{
+        margin-top: 35%;
+    }
+
+    .title-container span, .title-out-container span{
+        font-size: 2em;
+    }
+
+    .title-viewport, .title-out-viewport{
+        width : 80vw;
+        height: 80vw;
+        left: 10%;
+        top: 25%;
+    }
+
+    .btn-burger{
+        width: 30px;
+        right: 10%;
+    }
+
+    .btn-burger .line{
+        height: 2px;
+        margin-top: 8px;
+    }
+
+    .span-menu{
+        font-size: .4em;
+        margin-right: 50px;
+        padding-top: 5%;
+    }
+
+    .about-btn{
+        bottom: 10%;
+        left: 30%;
+        background-color: var(--secondary_color);
+        color: var(--primary_color);
+        padding: 4% 3%;
+        font-weight: 500;
+        animation: button 1s infinite alternate;
+    }
+
+    .project{
+        padding: 0 8% 4% 8%;
+    }
+
+    .project-title{
+        margin-bottom: 100px;
+    }
+
+    .project-card{
+        margin: 50px 0;
+    }
+
+    .project-title .section-title{
+        font-size: 2.3em;
+    }
+
+    .project-viewport img{
+        width: 85vw;
+        max-width: 85vw;    
+    }
+
+    .project-info{
+        max-width: 85vw ;
+    }
+
+    .project-btn{
+        width: 60vw;
+        background-color: var(--secondary_color);
+        color: var(--primary_color);
+        padding: 4% 3%;
+        font-weight: 500;
+        animation: button 1s infinite alternate;
+    }
+
+    .project-desc{
+        height: 85vw;
+        max-height: 85vw;    
+    }
+
+    .project-desc-link{
+        padding: 5% 3%;
+        background-color: var(--secondary_color);
+        color: var(--primary_color);
+        font-weight: 500;
+        animation: button 1s infinite alternate;
+    }
+
+    .contact{
+        padding-top: 50px;
+    }
+
+    .contact-title .section-title{
+        background-color:salmon;
+        font-size: 2.3em;
+        transform: translateY(0);
+    }
+
+    .contact-text {
+        width: 80%;
+        top: 60%;
+        font-size: .9em;
+    }
+
+    .contact-btn{
+        width: 60%;
+        background-color: var(--secondary_color);
+        color: var(--primary_color);
+        padding: 4% 3%;
+        font-weight: 500;
+        animation: button 1s infinite alternate;
+    }
+
+    .contact-img-title{
+        width: 80vw;
+        max-width: 80vw;
+    }
+
+    .contact-img-title img{
+        width: 100%;
+        opacity: .8;
+        transform: translateY(100%);
+    }
+
+    .contact-link a{
+        margin-right: 5px;
+        margin-left: 5px;
+    }
+
+    @keyframes button{
+        from { transform: scale(1);}
+        to {transform: scale(1.05)}
+    }
 }

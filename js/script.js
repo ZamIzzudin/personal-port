@@ -79,7 +79,7 @@ function success(result){
     
     renderData.forEach((e,i)=>{
         if(i % 2 === 0){
-            render = renderCard(e, i);
+            render = renderCard(e, i, "");
             projectContainer.innerHTML += render;
         }else{
             render = renderCard(e, i, "right");  
@@ -125,6 +125,10 @@ const aboutBtn = getHTML('.about-btn');
 
 const projectContainer = getHTML('.project');
 
+const projectViewport = getHTML('.project-viewport');
+
+const projectDesc = getHTML('.project-desc');
+
 const preloader = getHTML('#preloader');    
 
 getDataProject('./data.json', success); 
@@ -151,44 +155,100 @@ document.addEventListener("scroll",()=>{
         aboutBtn.style.opacity = 1;
     }
 
-    if(scrollY > 900){
-        renderY(projectCard[0],1);
-        if(scrollY > 1400){
-            renderY(projectCard[1],1);
-            if(scrollY > 1800){
-                renderY(projectCard[2],1);
-                if(scrollY > 2300){
-                    renderY(projectCard[3],1);
-                }else{
-                    fadeY(projectCard[3]);
-                }
-            }else{
-                fadeY(projectCard[2]);
-            }
-        }else{
-            fadeY(projectCard[1]);
+    if(window.screen.width > 1023){
+        if (scrollY > 500) {
+            rendersX(projectTitle);
+            aboutBtn.style.opacity = 0;
+        } else {
+            fadesX(projectTitle);
+            aboutBtn.style.opacity = 1;
         }
+
+        if (scrollY > 900) {
+            renderY(projectCard[0], 1);
+            if (scrollY > 1400) {
+                renderY(projectCard[1], 1);
+                if (scrollY > 1800) {
+                    renderY(projectCard[2], 1);
+                    if (scrollY > 2300) {
+                        renderY(projectCard[3], 1);
+                    } else {
+                        fadeY(projectCard[3]);
+                    }
+                } else {
+                    fadeY(projectCard[2]);
+                }
+            } else {
+                fadeY(projectCard[1]);
+            }
+        } else {
+            fadeY(projectCard[0]);
+        }
+
+        if (scrollY > 2900) {
+            rendersY(contactTitle);
+            setTimeout(() => {
+                renderY(contactImg, .7);
+            }, 300);
+        } else {
+            fadesY(contactTitle);
+            fadeY(contactImg);
+        }
+
     }else{
-        fadeY(projectCard[0]);
-    }
+        if (scrollY > 300) {
+            rendersX(projectTitle);
+            aboutBtn.style.opacity = 0;
+        } else {
+            fadesX(projectTitle);
+            aboutBtn.style.opacity = 1;
+        }
 
-    if (scrollY > 2900) {
-        rendersY(contactTitle);
-        setTimeout(() => {
-            renderY(contactImg,.7);    
-        }, 300);
-    } else {
-        fadesY(contactTitle);
-        fadeY(contactImg);
-    }
+        if (scrollY > 400) {
+            renderY(projectCard[0], 1);
+            if (scrollY > 1000) {
+                renderY(projectCard[1], 1);
+                if (scrollY > 1400) {
+                    renderY(projectCard[2], 1);
+                    if (scrollY > 1800) {
+                        renderY(projectCard[3], 1);
+                    } else {
+                        fadeY(projectCard[3]);
+                    }
+                } else {
+                    fadeY(projectCard[2]);
+                }
+            } else {
+                fadeY(projectCard[1]);
+            }
+        } else {
+            fadeY(projectCard[0]);
+        }
 
+        if (scrollY > 2400) {
+            rendersY(contactTitle);
+            setTimeout(() => {
+                renderY(contactImg, .7);
+            }, 300);
+        } else {
+            fadesY(contactTitle);
+            fadeY(contactImg);
+        }
+    }
 })
 
 window.addEventListener("load", ()=>{
-    setTimeout(() => {
-        preloader.style.opacity = 0;
-        setTimeout(() => {
-            preloader.style.display = "none";        
-        }, 700);  
-    }, 2000);
+    // setTimeout(() => {
+    //     preloader.style.opacity = 0;
+    //     setTimeout(() => {
+    //         preloader.style.display = "none";        
+    //     }, 700);  
+    // }, 2000);
+    preloader.style.display = "none";
 })
+
+if (window.screen.width > 1023){
+    projectViewport.addEventListener("click",()=>{
+        projectDesc.style.opacity = 1;
+    })
+}
