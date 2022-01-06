@@ -199,15 +199,16 @@ nav{
 }
 
 .nav-burger-items{
+    left: -1vw;
     position: absolute;
-    width: 100%;
+    width: calc(100% + 1vw);
     height: 100vh;
     background-color: var(--primary_color);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -3%;
-    justify-content:center;
+    justify-content: center;
     transform: translateX(-150%);
     z-index: -1;
     transition: .5s ease-in-out;
@@ -667,7 +668,8 @@ footer span{
     }
 
     .about-btn{
-        bottom: 10%;
+        font-size: .8em;
+        bottom: 18%;
         left: 30%;
         background-color: var(--secondary_color);
         color: var(--primary_color);
@@ -702,7 +704,8 @@ footer span{
     }
 
     .project-btn{
-        width: 60vw;
+        width: 48vw;
+        font-size: .8em;
         background-color: var(--secondary_color);
         color: var(--primary_color);
         padding: 4% 3%;
@@ -716,6 +719,8 @@ footer span{
     }
 
     .project-desc-link{
+        width: 35%;
+        font-size: .8em;
         padding: 5% 3%;
         background-color: var(--secondary_color);
         color: var(--primary_color);
@@ -740,7 +745,8 @@ footer span{
     }
 
     .contact-btn{
-        width: 60%;
+        font-size: .8em;
+        width: 40%;
         background-color: var(--secondary_color);
         color: var(--primary_color);
         padding: 4% 3%;
