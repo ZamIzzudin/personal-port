@@ -26,9 +26,9 @@ function rendersY(e) {
     console.log("nyala")
 }
 
-function renderY(e, opacity) {
+function renderY(e) {
     e.style.transform = `translateY(0)`;
-    e.style.opacity = opacity;
+    e.style.opacity = 1;
 }
 
 function getDataProject(url, success) {
@@ -130,13 +130,13 @@ document.addEventListener("scroll", () => {
         }
 
         if (scrollY > 900) {
-            renderY(projectCard[0], 1);
+            renderY(projectCard[0]);
             if (scrollY > 1400) {
-                renderY(projectCard[1], 1);
+                renderY(projectCard[1]);
                 if (scrollY > 1900) {
-                    renderY(projectCard[2], 1);
+                    renderY(projectCard[2]);
                     if (scrollY > 2400) {
-                        renderY(projectCard[3], 1);
+                        renderY(projectCard[3]);
                     }
                 }
             }
@@ -155,13 +155,13 @@ document.addEventListener("scroll", () => {
         }
 
         if (scrollY > 400) {
-            renderY(projectCard[0], 1);
+            renderY(projectCard[0]);
             if (scrollY > 1000) {
-                renderY(projectCard[1], 1);
+                renderY(projectCard[1]);
                 if (scrollY > 1400) {
-                    renderY(projectCard[2], 1);
+                    renderY(projectCard[2]);
                     if (scrollY > 1800) {
-                        renderY(projectCard[3], 1);
+                        renderY(projectCard[3]);
                     }
                 }
             }

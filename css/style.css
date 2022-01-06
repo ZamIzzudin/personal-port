@@ -234,7 +234,6 @@ nav{
 
 .nav-burger-item:hover{
     transform: scale(1.1);
-    background-color: var(--blueWopp);
 }
 
 .nav-burger-title{
@@ -264,15 +263,21 @@ nav{
     opacity: 0;
 }
 
-.nav-burger-socmed{
+.nav-burger-socmed{   
+    padding: 15px 0;
+}
+
+.nav-burger-socmed ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    flex-direction: row;
     display: flex;
     justify-content: space-between;
-    padding: 15px 0;
 }
 
 .socmed-link{
     font-size: 2em;
-    list-style: none;
 }
 
 .socmed-link a {
@@ -397,7 +402,7 @@ nav{
     position: relative;
     min-width: fit-content;
     min-height: fit-content;
-    /* opacity: 0; */
+    opacity: 0;
     transform: translateY(100%);
     transition: transform 0.7s;
     cursor: pointer;
@@ -527,7 +532,7 @@ nav{
 .contact-title .section-title{
     display: block;
     transform: translateY(30vh);
-    opacity: 1;
+    opacity: 0;
     transition: .7s;
 }
 
@@ -746,6 +751,7 @@ footer span{
     .contact-title .section-title{
         font-size: 2.3em;
         transform: translateY(30vh);
+        opacity: 0;
     }
 
     .contact-text {
