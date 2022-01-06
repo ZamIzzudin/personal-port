@@ -2,33 +2,33 @@
     {
         "name" : "Slicing",
         "year" : "2021",
-        "thumbnail" : "./assets/liberty.jpg",
+        "thumbnail" : "./assets/liberty.webp",
         "tool" : "HTML, CSS, JS",
-        "link" : ""
+        "link" : "/slicing"
     },
     {
         "name": "Online Shop",
         "year": "2022",
-        "thumbnail": "./assets/lisa.jpg",
+        "thumbnail": "./assets/lisa.webp",
         "tool": "REACT, EXPRESS, NODE, MYSQL",
-        "link": ""
+        "link": "/olshop"
     },
     {
         "name": "Marketplace",
         "year": "2022",
-        "thumbnail": "./assets/kimono.jpg",
+        "thumbnail": "./assets/kimono.webp",
         "tool": "REACT, EXPRESS, NODE, MONGODB",
-        "link": ""
+        "link": "/marketplace"
     },
     {
         "name": "Office System",
         "year": "2022",
-        "thumbnail": "./assets/wave.png",
+        "thumbnail": "./assets/wave.webp",
         "tool": "EXPRESS, NODE, MYSQL, REACT NATIVE",
-        "link": ""
+        "link": "/officesys"
     },
     {
         "name" : "Other Project",
-        "link" : ""
+        "link" : "/otherproject"
     }
 ]

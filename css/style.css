@@ -1,6 +1,7 @@
 @font-face {
     font-family: "Monument Extended";
     src: url("../assets/font/MonumentExtended-Black.woff") format("woff");
+    font-display: swap;
 }
 
 :root{
@@ -94,6 +95,8 @@ section .section-title:nth-child(1){
 }
 
 #preloader img{
+    width: 10%;
+    height: auto;
     max-width: 10%;
     max-height: auto;
 }
@@ -313,7 +316,7 @@ nav{
 }
 
 .title-viewport {
-    background-image:url("../assets/foto.jpg") ;
+    background-image:url("../assets/foto.webp") ;
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -348,6 +351,8 @@ nav{
 }
 
 .rotate-hello{
+    width: 15vw;
+    height: 15vw;
     position: absolute;
     bottom: 0%;
     right: 25%;
@@ -400,6 +405,7 @@ nav{
 
 .project-viewport img{
     width: 28vw;
+    height: 28vw;
     max-width: 28vw;  
 }
 
@@ -538,6 +544,8 @@ nav{
 }
 
 .contact-img-title img{
+    width: 100%;
+    height: 100%;
     opacity: .8;
     transform: translateY(100%);
     transition: .7s;
@@ -628,6 +636,8 @@ footer span{
     }
 
     #preloader img{
+    width: 20vh;
+    height: auto;
     max-width: 20vh;
     max-height: auto;
     }
@@ -670,7 +680,7 @@ footer span{
     .about-btn{
         font-size: .8em;
         bottom: 18%;
-        left: 30%;
+        left: 33%;
         background-color: var(--secondary_color);
         color: var(--primary_color);
         padding: 4% 3%;
@@ -695,6 +705,7 @@ footer span{
     }
 
     .project-viewport img{
+        height: 85vw;
         width: 85vw;
         max-width: 85vw;    
     }
@@ -733,9 +744,8 @@ footer span{
     }
 
     .contact-title .section-title{
-        background-color:salmon;
         font-size: 2.3em;
-        transform: translateY(0);
+        transform: translateY(30vh);
     }
 
     .contact-text {
@@ -757,6 +767,7 @@ footer span{
     .contact-img-title{
         width: 80vw;
         max-width: 80vw;
+        height: auto;
     }
 
     .contact-img-title img{
