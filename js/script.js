@@ -238,13 +238,12 @@ document.addEventListener("scroll",()=>{
 })
 
 window.addEventListener("load", ()=>{
-    // setTimeout(() => {
-    //     preloader.style.opacity = 0;
-    //     setTimeout(() => {
-    //         preloader.style.display = "none";        
-    //     }, 700);  
-    // }, 2000);
-    preloader.style.display = "none";
+    setTimeout(() => {
+        preloader.style.opacity = 0;
+        setTimeout(() => {
+            preloader.style.display = "none";        
+        }, 700);  
+    }, 2000);
 })
 
 if (window.screen.width > 1023){
