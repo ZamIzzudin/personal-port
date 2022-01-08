@@ -70,7 +70,7 @@ function render(data,i) {
 function renderDetail(data){
     if(data.name === undefined){
         return `<button class="close-btn"><i class="close fas fa-times"><b hidden>close detail modal</b></i></button>
-            <h1>PROJECT DOESN'T EXIST</h1>
+            <h1 class="notfound" >PROJECT DOESN'T EXIST</h1>
         `
     }else{
         return `<button class="close-btn"><i class="close fas fa-times"><b hidden>close detail modal</b></i></button>
@@ -81,8 +81,8 @@ function renderDetail(data){
                 <h1>${data.name}</h1>
                 <h2>${data.tool}</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, esse itaque labore ratione quisquam minima nam eius est qui facere officia eos vitae fuga necessitatibus. Aliquid autem consequatur nesciunt sapiente temporibus. Beatae, repudiandae numquam animi impedit vel est magnam dolorum cum, quo, suscipit enim perferendis! Quia, eius. Iusto, nesciunt assumenda.</p>
-                <a href="${data.sitelink}"><i class="fas fa-link"><b hidden>Link to go to site</b></i></a>
-                <a href="${data.githublink}"><i class="fab fa-github"><b hidden>Link to go to Github</b></i></a>
+                <a href="${data.sitelink}"><i class="fas fa-link"></i></a>
+                <a href="${data.githublink}"><i class="fab fa-github"></i></a>
             </div>`    
     }
 }
@@ -90,7 +90,7 @@ function renderDetail(data){
 function imageRender(data){
     let images = []
     data.forEach(e => {
-        images += `<img src="${e}">`
+        images += `<img src="${e}" alt="project image">`
     });
     return images
 }
@@ -128,6 +128,13 @@ window.addEventListener('click',(e)=>{
 })
 
 window.addEventListener("load",()=>{
+    setTimeout(() => {
+        preloader.style.opacity = 0;
+        setTimeout(() => {
+            preloader.style.display = "none";
+        }, 700);
+    }, 2000);
+
     const projects = getHTMLs(".project");
 
     projects.forEach((project)=>{
@@ -160,13 +167,4 @@ window.addEventListener("scroll",()=>{
         })
     }
 
-})
-
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        preloader.style.opacity = 0;
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 700);
-    }, 2000);
 })
