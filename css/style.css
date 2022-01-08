@@ -202,15 +202,16 @@ nav{
 }
 
 .nav-burger-items{
-    left: -1vw;
     position: absolute;
-    width: calc(100% + 1vw);
+    width:calc(100% + 1vw);
     height: 100vh;
     background-color: var(--primary_color);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: -3%;
+    top: 0;
+    left: -1vw;
     justify-content: center;
     transform: translateX(-150%);
     z-index: -1;
@@ -313,15 +314,15 @@ nav{
 
 /* Front Page */
 .title-viewport, .title-out-viewport{
-    width: 40%;
+    width: 35%;
     position: absolute;
     height: 70%;
     top: 15%;
-    left: 30%;
+    left: 33%;
 }
 
 .title-viewport {
-    background-image:url("../assets/foto.webp") ;
+    background-image:url("../assets/night.gif") ;
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -330,8 +331,8 @@ nav{
 
 .title-container, .title-out-container{
     display: flex;
-    margin-top: 25%;
-    transform:translateX(-80%);
+    margin-top: 30%;
+    transform:translateX(-160%);
     transition: .5s;
 }
 
@@ -415,7 +416,7 @@ nav{
 }
 
 .project-info{
-    padding:10px 0;
+    padding:3% 0;
     max-width: 30vw;
     display: grid;
     grid-template-areas: "num name" "num tool";
@@ -574,6 +575,7 @@ nav{
     letter-spacing: 1px;
     line-height: 1.3em;
     text-align: justify;
+    margin-bottom: 30px;
 }
 
 .contact-btn{
@@ -664,6 +666,10 @@ footer span{
         height: 80vw;
         left: 10%;
         top: 25%;
+    }
+
+    .nav-burger-items{
+        height :100vh;
     }
 
     .btn-burger{

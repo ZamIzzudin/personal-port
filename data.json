@@ -1,34 +1,96 @@
-[
-    {
-        "name" : "Slicing",
-        "year" : "2021",
-        "thumbnail" : "./assets/liberty.webp",
-        "tool" : "HTML, CSS, JS",
-        "link" : "/slicing"
-    },
-    {
-        "name": "Online Shop",
-        "year": "2022",
-        "thumbnail": "./assets/lisa.webp",
-        "tool": "REACT, EXPRESS, NODE, MYSQL",
-        "link": "/olshop"
-    },
-    {
-        "name": "Marketplace",
-        "year": "2022",
-        "thumbnail": "./assets/kimono.webp",
-        "tool": "REACT, EXPRESS, NODE, MONGODB",
-        "link": "/marketplace"
-    },
-    {
-        "name": "Office System",
-        "year": "2022",
-        "thumbnail": "./assets/wave.webp",
-        "tool": "EXPRESS, NODE, MYSQL, REACT NATIVE",
-        "link": "/officesys"
-    },
-    {
-        "name" : "Other Project",
-        "link" : "/otherproject"
-    }
-]
+{
+        "project" : [
+        {
+            "name" : "Slicing",
+            "year" : "2021",
+            "thumbnail" : "./assets/slicing.webp",
+            "tool" : "HTML, CSS, JS",
+            "link" : "./project/slicing.html"
+        },
+        {
+            "name": "Online Shop",
+            "year": "2022",
+            "thumbnail": "./assets/olshop.webp",
+            "tool": "REACT, EXPRESS, NODE, MYSQL",
+            "link": "./project/olshop.html"
+        },
+        {
+            "name": "Marketplace",
+            "year": "2022",
+            "thumbnail": "./assets/marketplace.webp",
+            "tool": "REACT, EXPRESS, NODE, MONGODB",
+            "link": "./project/marketplace.html"
+        },
+        {
+            "name": "Office System",
+            "year": "2022",
+            "thumbnail": "./assets/officesystem.webp",
+            "tool": "EXPRESS, NODE, MYSQL, REACT NATIVE",
+            "link": "./project/officesys.html"
+        },
+        {
+            "name" : "Other Project",
+            "link" : "./project/otherproject.html"
+        }
+    ],
+    "slicing" : [
+        {
+            "name": "Agus"
+        },
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "olshop": [
+        {
+            "name": "Agus"
+        },
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "marketplace": [
+        {
+            "name" : "Agus",
+            "thumbnail": "../assets/marketplace.webp"
+        },
+        {
+            "name": "Joko"
+        },
+        {
+            "name": "Maija"
+        },
+        {
+            "name": "Memek"
+        },
+        {
+            "name": "Paijo"
+        },
+        {
+            "name": "Roni"
+        }
+    ],"officesys": [
+       {
+            "name" : "Agus"
+        },
+        {},
+        {},
+        {},
+        {},
+        {}
+    ],
+    "otherproject": [
+        {
+            "name": "Agus"
+        },
+        {},
+        {},
+        {},
+        {},
+        {}
+    ]
+}

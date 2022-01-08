@@ -23,7 +23,6 @@ function rendersY(e) {
             el.style.opacity = 1;
         }, 300 * index);
     })
-    console.log("nyala")
 }
 
 function renderY(e) {
@@ -49,7 +48,7 @@ function getDataProject(url, success) {
 }
 
 function success(result) {
-    let data = JSON.parse(result);
+    let data = JSON.parse(result).project;
 
     renderData = data.slice(0, 4);
     linkData = data[4];
@@ -118,13 +117,39 @@ document.addEventListener("scroll", () => {
     const projectCard = getHTMLs('.project-viewport');
 
     if (scrollY < 500) {
-        titleFP[0].style.transform = `translateX(${-80 - (scrollY / 10)}%)`;
-        titleOutFP[0].style.transform = `translateX(${-80 - (scrollY / 10)}%)`;
+        titleFP[0].style.transform = `translateX(${-160 - (scrollY / 10)}%)`;
+        titleOutFP[0].style.transform = `translateX(${-160 - (scrollY / 10)}%)`;
         titleFP[1].style.transform = `translateX(${-160 + (scrollY / 10)}%)`;
         titleOutFP[1].style.transform = `translateX(${-160 + (scrollY / 10)}%)`;
     }
 
-    if (window.screen.width > 1023) {
+
+    if (window.screen.width > 2300) { // computer wide screen
+        if (scrollY > 800) {
+            rendersX(projectTitle);
+        }
+
+        if (scrollY > 1200) {
+            renderY(projectCard[0]);
+            if (scrollY > 1700) {
+                renderY(projectCard[1]);
+                if (scrollY > 2200) {
+                    renderY(projectCard[2]);
+                    if (scrollY > 2700) {
+                        renderY(projectCard[3]);
+                    }
+                }
+            }
+        }
+
+        if (scrollY > 3200) {
+            rendersY(contactTitle);
+            setTimeout(() => {
+                renderY(contactImg, .7);
+            }, 300);
+        }
+
+    } else if (window.screen.width > 1023 && window.screen.width < 2300){ // computer small screen
         if (scrollY > 500) {
             rendersX(projectTitle);
         }
@@ -148,8 +173,8 @@ document.addEventListener("scroll", () => {
                 renderY(contactImg, .7);
             }, 300);
         }
-
-    } else {
+        
+    }else { // mobile
         if (scrollY > 300) {
             rendersX(projectTitle);
         }
@@ -185,7 +210,7 @@ window.addEventListener("load", () => {
     }, 2000);
 })
 
-if (window.screen.width > 1023) {
+if (window.screen.width < 1023) {
     projectViewport.addEventListener("click", () => {
         projectDesc.style.opacity = 1;
     })
