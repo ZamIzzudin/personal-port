@@ -71,14 +71,13 @@ function renderCard(data, index, right) {
     return `<div class="project-card ${right}">
                 <div class="project-viewport">
                     <div class="project-desc">
-                        <span class="project-desc-year">${data.year}</span>
                         <a href="${data.link}" class="project-desc-link" >See Details <i class="fas fa-long-arrow-alt-right arrow"></i></a>
                     </div>
                     <img src="${data.thumbnail}" alt="Thumbnail picture of ${data.name}" >
                     <div class="project-info">
                         <span class="project-num">0${index + 1}.</span>
                         <h1 class="project-name">${data.name}</h1>
-                        <h2 class="project-tool">${data.tool}</h2>
+                        <h2 class="project-year">${data.year}</h2>
                     </div>
                 </div>
             </div>`

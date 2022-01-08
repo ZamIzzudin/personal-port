@@ -69,27 +69,30 @@ function render(data,i) {
 
 function renderDetail(data){
     if(data.name === undefined){
-        return `<button class="close-btn">close</button>
-            <h1>PROJECT NOT EXIST</h1>
+        return `<button class="close-btn"><i class="close fas fa-times"><b hidden>close detail modal</b></i></button>
+            <h1>PROJECT DOESN'T EXIST</h1>
         `
     }else{
-        return `<button class="close-btn">close</button>
+        return `<button class="close-btn"><i class="close fas fa-times"><b hidden>close detail modal</b></i></button>
             <div class="detail-container">
-                <div class="image"></div>
-                <div class="image"></div>
-                <div class="image"></div>
-                <div class="image"></div>
-                <div class="image"></div>
+                ${imageRender(data.images)}
             </div>
             <div class="detail-desc">
                 <h1>${data.name}</h1>
-                <h2>tools</h2>
+                <h2>${data.tool}</h2>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Corporis, esse itaque labore ratione quisquam minima nam eius est qui facere officia eos vitae fuga necessitatibus. Aliquid autem consequatur nesciunt sapiente temporibus. Beatae, repudiandae numquam animi impedit vel est magnam dolorum cum, quo, suscipit enim perferendis! Quia, eius. Iusto, nesciunt assumenda.</p>
-                <a href="">Github</a>
-                <a href="">Project</a>
+                <a href="${data.sitelink}"><i class="fas fa-link"><b hidden>Link to go to site</b></i></a>
+                <a href="${data.githublink}"><i class="fab fa-github"><b hidden>Link to go to Github</b></i></a>
             </div>`    
     }
-    
+}
+
+function imageRender(data){
+    let images = []
+    data.forEach(e => {
+        images += `<img src="${e}">`
+    });
+    return images
 }
 
 function getHTMLs(htmls) {
@@ -116,7 +119,7 @@ getData('../data.json',success);
 
 // EVENT LISTENER
 window.addEventListener('click',(e)=>{
-    if(e.target.className === 'close-btn'){
+    if(e.target.classList.contains('close')){
         setTimeout(() => {
             detailProject.style.display = 'none';
         }, 500);
@@ -131,10 +134,8 @@ window.addEventListener("load",()=>{
         project.addEventListener('click',(e)=>{
             let projectNum = e.target.dataset.project
             if(projectNum === undefined){
-                console.log(projectNum)
             }else{
                 getData('../data.json', success, projectNum);    
-                console.log(projectNum)
             }
            
         })
@@ -143,10 +144,20 @@ window.addEventListener("load",()=>{
 
 window.addEventListener("scroll",()=>{
     let scrollY = window.pageYOffset;
+    const projects = getHTMLs(".project");
 
     if (scrollY < 500) {
         titlePage[0].style.transform = `translateX(${0 - (scrollY / 15)}%)`;
         titlePage[1].style.transform = `translateX(${0 + (scrollY / 15)}%)`;    
+    }
+
+    if(scrollY > 500){
+        projects.forEach((project,i)=>{
+            setTimeout(() => {
+                project.style.opacity = 1;    
+            }, 300 * i);
+            
+        })
     }
 
 })

@@ -423,7 +423,7 @@ nav{
     grid-template-columns: 1fr 3fr;
 }
 
-.project-name, .project-num, .project-tool{
+.project-name, .project-num, .project-year{
     margin: 0;
     font-weight: 600;
 }
@@ -440,7 +440,7 @@ nav{
     grid-area: name;
 }
 
-.project-tool{
+.project-year{
     grid-area: tool;
     font-size: .8em;
     font-weight: 400;
@@ -505,14 +505,6 @@ nav{
     background-color: var(--secondary_color);
     color: var(--primary_color);
     font-weight: 500;
-}
-
-.project-desc-year{
-    color: var(--secondary_color);
-    position: absolute;
-    top: 0;
-    right: 5%;
-    opacity: 1 !important;
 }
 
 .project-viewport:hover > .project-desc{
