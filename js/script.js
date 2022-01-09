@@ -157,16 +157,16 @@ document.addEventListener("scroll", () => {
             renderY(projectCard[0]);
             if (scrollY > 1400) {
                 renderY(projectCard[1]);
-                if (scrollY > 1900) {
+                if (scrollY > 1800) {
                     renderY(projectCard[2]);
-                    if (scrollY > 2400) {
+                    if (scrollY > 2100) {
                         renderY(projectCard[3]);
                     }
                 }
             }
         }
 
-        if (scrollY > 2900) {
+        if (scrollY > 2700) {
             rendersY(contactTitle);
             setTimeout(() => {
                 renderY(contactImg, .7);

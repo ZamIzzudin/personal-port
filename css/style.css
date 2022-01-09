@@ -203,7 +203,7 @@ nav{
 
 .nav-burger-items{
     position: absolute;
-    width:calc(100% + 1vw);
+    width:calc(100% + 10%);
     height: 100vh;
     background-color: var(--primary_color);
     display: flex;
@@ -245,7 +245,7 @@ nav{
 }
 
 .navbar input[type="checkbox"]:checked ~ .nav-burger-items{
-    transform: translateX(0);
+    transform: translateX(-8%);
 }
 
 .navbar input[type="checkbox"]:checked ~ .nav-burger-menu .btn-burger .line1{
@@ -662,6 +662,14 @@ footer span{
 
     .nav-burger-items{
         height :100vh;
+    }
+
+    .nav-burger-item, .nav-burger-title{
+        font-size: 1em;
+    }
+
+    .socmed-link{
+        font-size: 1.1em;
     }
 
     .btn-burger{
