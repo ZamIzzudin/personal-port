@@ -111,6 +111,7 @@ getDataProject('./data.json', success);
 // EVENT LISTENER
 document.addEventListener("scroll", () => {
     let scrollY = window.pageYOffset;
+    console.log(scrollY);
 
     const projectTitle = getHTMLs('.project-title .section-title');
     const projectCard = getHTMLs('.project-viewport');
@@ -134,34 +135,6 @@ document.addEventListener("scroll", () => {
                 renderY(projectCard[1]);
                 if (scrollY > 2200) {
                     renderY(projectCard[2]);
-                    if (scrollY > 2700) {
-                        renderY(projectCard[3]);
-                    }
-                }
-            }
-        }
-
-        if (scrollY > 3200) {
-            rendersY(contactTitle);
-            setTimeout(() => {
-                renderY(contactImg, .7);
-            }, 300);
-        }
-
-    } else if (window.screen.width > 1023 && window.screen.width < 2300){ // computer small screen
-        if (scrollY > 500) {
-            rendersX(projectTitle);
-        }
-
-        if (scrollY > 900) {
-            renderY(projectCard[0]);
-            if (scrollY > 1400) {
-                renderY(projectCard[1]);
-                if (scrollY > 1800) {
-                    renderY(projectCard[2]);
-                    if (scrollY > 2100) {
-                        renderY(projectCard[3]);
-                    }
                 }
             }
         }
@@ -172,8 +145,30 @@ document.addEventListener("scroll", () => {
                 renderY(contactImg, .7);
             }, 300);
         }
-        
-    }else { // mobile
+
+    } else if (window.screen.width > 1023 && window.screen.width < 2300) { // computer small screen
+        if (scrollY > 500) {
+            rendersX(projectTitle);
+        }
+
+        if (scrollY > 900) {
+            renderY(projectCard[0]);
+            if (scrollY > 1400) {
+                renderY(projectCard[1]);
+                if (scrollY > 1800) {
+                    renderY(projectCard[2]);
+                }
+            }
+        }
+
+        if (scrollY > 2100) {
+            rendersY(contactTitle);
+            setTimeout(() => {
+                renderY(contactImg, .7);
+            }, 300);
+        }
+
+    } else { // mobile
         if (scrollY > 300) {
             rendersX(projectTitle);
         }
@@ -184,14 +179,11 @@ document.addEventListener("scroll", () => {
                 renderY(projectCard[1]);
                 if (scrollY > 1400) {
                     renderY(projectCard[2]);
-                    if (scrollY > 1800) {
-                        renderY(projectCard[3]);
-                    }
                 }
             }
         }
 
-        if (scrollY > 2400) {
+        if (scrollY > 1800) {
             rendersY(contactTitle);
             setTimeout(() => {
                 renderY(contactImg, .7);

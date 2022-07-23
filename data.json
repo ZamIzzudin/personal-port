@@ -1,90 +1,82 @@
 {
-        "project" : [
+    "project": [
         {
-            "name" : "Slicing",
-            "year" : "2021",
-            "thumbnail" : "./assets/slicing.webp",
-            "link" : "./project/slicing.html"
+            "name": "Pakalolo E-Commerce",
+            "year": "2021",
+            "thumbnail": "./assets/pakalolo_logo.jpg",
+            "link": "./project/pakalolo-ecomm.html"
         },
         {
-            "name": "Marketplace",
+            "name": "Muse ID API",
+            "year": "2021",
+            "thumbnail": "./assets/muse_logo.jpg",
+            "link": "./project/muse-api.html"
+        },
+        {
+            "name": "Lunar Boost B2C",
             "year": "2022",
-            "thumbnail": "./assets/olshop.webp",
-            "link": "./project/marketplace.html"
-        },
-        {
-            "name": "Social Media",
-            "year": "2022",
-            "thumbnail": "./assets/marketplace.webp",
-            "link": "./project/socmed.html"
-        },
-        {
-            "name": "React Native",
-            "year": "2022",
-            "thumbnail": "./assets/officesystem.webp",
-            "link": "./project/reactnative.html"
-        },
-        {
-            "name" : "Other Project",
-            "link" : "./project/otherproject.html"
+            "thumbnail": "./assets/lunar_logo.jpg",
+            "link": "./project/lunar-boost-b2c.html"
         }
     ],
-    "slicing" : [
-        {
-            "name": "agus",
-            "thumbnail": "../assets/comingsoon.webp",
-            "images": [
-                "","","","",""
-            ]
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
+    "pakalolo-ecomm": {
+        "name": "Pakalolo E-Commerce",
+        "description": "Unofficial e-commerce from Pakalolo that provides footwear (shoes or sandals) for both men and women. This web app is a single page application (SPA) which is built using React.JS as Front End and NodeJS to create APIs and use SQL databases. I made this project as a final project for my lectures.",
+        "tools": [
+            "React JS",
+            "Node JS",
+            "SQL"
+        ],
+        "thumbnail": [
+            "../assets/img/img1.jpg",
+            "../assets/img/img2.jpg",
+            "../assets/img/img3.jpg",
+            "../assets/img/img4.png",
+            "../assets/img/img5.jpg",
+            "../assets/img/img6.png",
+            "../assets/img/img3.jpg",
+            "../assets/img/img2.jpg"
+        ],
+        "link": {
+            "github": "https://github.com/ZamIzzudin/Pakalolo-SPA",
+            "direct": ""
         }
-    ],
-    "socmed": [
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
+    },
+    "muse-api": {
+        "name": "Muse ID API",
+        "description": "An unofficial API from Muse Indonesia that provides data about anime that is broadcast on Muse Indonesia's YouTube channel. I created this API to help developers who are learning about API integration to make it easier for them to find APIs that contain simple but applicable data. This API is built using NodeJS as well as the MongoDB database.",
+        "tools": [
+            "Heroku",
+            "Node JS",
+            "MongoDB"
+        ],
+        "thumbnail": [
+            "../assets/muse.png",
+            "../assets/muse2.png",
+            "../assets/muse3.png",
+            "../assets/muse4.png"
+        ],
+        "link": {
+            "github": "https://github.com/ZamIzzudin/Muse-API",
+            "direct": "https://muse-id-api.netlify.app/"
         }
-    ],
-    "marketplace": [
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
+    },
+    "lunar-boost-b2c": {
+        "name": "Lunar Boost B2C",
+        "description": "Web App that serves B2C for online game jockey services. This project is my first paid project where I got a part to handle Front End using NextJS. This project has been integrated with firebase auth as an authorization with social media as well as paypal and metamask as payment method vendors.",
+        "tools": [
+            "Next JS",
+            "Firebase"
+        ],
+        "thumbnail": [
+            "../assets/lunar/lunar.png",
+            "../assets/lunar/lunar2.png",
+            "../assets/lunar/lunar3.png",
+            "../assets/lunar/lunar4.png"
+        ],
+        "link": {
+            "github": "https://github.com/ZamIzzudin/deploy-b2c",
+            "direct": "https://deploy-b2c.vercel.app/"
         }
-    ],"reactnative": [
-       {
-        "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-        "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-        "thumbnail": "../assets/comingsoon.webp"
-         }
-    ],
-    "otherproject": [
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        },
-        {
-            "thumbnail": "../assets/comingsoon.webp"
-        }
-    ]
+    }
 }
