@@ -111,7 +111,6 @@ getDataProject('./data.json', success);
 // EVENT LISTENER
 document.addEventListener("scroll", () => {
     let scrollY = window.pageYOffset;
-    console.log(scrollY);
 
     const projectTitle = getHTMLs('.project-title .section-title');
     const projectCard = getHTMLs('.project-viewport');
